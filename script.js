@@ -94,9 +94,23 @@ const palindromo = (cadena7) => {
 
 // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
+const eliminaPatrones = (texto, eliminar) => {
+    if (typeof texto === "string") {
+        let re = RegExp(eliminar, "g")
+        let clear = texto.replace(re,"")
+        console.log(clear)
+    } else {
+        console.warn('Debes ingresar un texto y un patrón a eliminar.')
+    }
+}
 
+//eliminaPatrones("xyz1, xyz2, xyz3, xyz4, xyz5", "xyz")
 
 // 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+
+const randNum = () => {console.log(Math.random()+501)}
+randNum()
+
 // 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
 // 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
